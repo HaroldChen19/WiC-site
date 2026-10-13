@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090f">
+  <meta name="description" content="World-in-Context is a training framework centered on In-Context Conditioning for interactive video world models, unifying view, action, and camera controls.">
+  <meta property="og:title" content="World-in-Context"><meta property="og:description" content="View, action, and camera. One shared context.">
+  <title>World-in-Context | Interactive Video World Models</title>
+  <link rel="icon" href="assets/logo.png" type="image/png"><link rel="stylesheet" href="styles.css">
+  <script src="media.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#worlds">Skip to videos</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-paper" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5Zm0 0v5h5M8 12h8m-8 4h6"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.07c-3.09.67-3.74-1.31-3.74-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.14 1.7 1.14.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.71-1.49-2.47-.28-5.06-1.24-5.06-5.49 0-1.21.43-2.2 1.14-2.98-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.6 1.53.22 2.66.11 2.94.71.78 1.14 1.77 1.14 2.98 0 4.26-2.6 5.21-5.08 5.49.4.35.75 1.03.75 2.07v3.04c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+  </defs></svg>
+  <header class="site-header">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="32" height="32"><span>World-in-Context</span></a>
+    <nav aria-label="Main navigation"><a href="#method">Overview</a><a href="#worlds">Worlds</a><a href="#switching">Perspectives</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-aura" aria-hidden="true"></div><div class="hero-wall" id="hero-wall" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 id="hero-title" aria-label="World-in-Context"><span class="title-prefix" aria-hidden="true">World-in-</span><span class="title-context" aria-hidden="true"><span class="title-letter">C</span><span class="context-logo"><img src="assets/logo.png" alt="" width="100" height="100"></span><span class="title-letter">ntext</span></span></h1>
+        <p class="hero-subtitle">In-Context Conditioning for<br class="mobile-break"> Interactive Video World Models</p>
+        <div class="hero-links">
+          <!-- Add the arXiv URL to href and remove aria-disabled when the paper is public. -->
+          <a class="button button-primary" id="paper-link" role="link" href="https://github.com/HaroldChen19/World-in-Context" target="_blank" rel="noopener"><svg><use href="#i-paper"/></svg> Read the report <span>↗</span></a>
+          <a class="button button-glass github-link" id="github-link" href="https://github.com/HaroldChen19/World-in-Context" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg><span>GitHub</span><svg class="external-arrow"><use href="#i-external"/></svg></a>
+        </div>
+        <div class="author-block"><p>Author One<i>·</i>Author Two<i>·</i>Author Three</p><span>Alibaba Token Hub, Alibaba Group</span></div>
+      </div>
+      <div class="hero-bottom wrap"><a href="#method">SCROLL TO EXPLORE <span>↓</span></a><button id="hero-motion" class="motion-control" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>Pause background</span></button></div>
+    </section>
+    <section class="section wrap method" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><div><p class="section-kicker">01 / OVERVIEW</p><h2 id="method-title">View, action, and camera.<br><em>One shared context.</em></h2></div></div>
+      <p class="method-intro">World-in-Context is a training framework centered on <strong>In-Context Conditioning (ICC)</strong>, bringing view, action, and camera controls into a shared attention space.</p>
+      <dl class="overview-capabilities" aria-label="Supported capabilities">
+        <div><dt>Three perspectives</dt><dd>Free-camera · First-person · Third-person</dd></div>
+        <div><dt>Joint control</dt><dd>Action inputs and/or camera trajectories</dd></div>
+        <div><dt>Dynamic switching</dt><dd>Change perspectives within a video</dd></div>
+      </dl>
+      <figure class="method-figure"><img src="assets/figures/method-overview.png" alt="In-Context Conditioning unifies view, action, and camera tokens with visual latents through shared self-attention. Interaction-Transport RoPE models accumulated control transitions." loading="lazy" decoding="async" width="2284" height="948"></figure>
+      <div class="results-row" aria-label="Results using the Wan2.2 backbone"><div><strong>5<span>B</span></strong><p>Wan2.2 backbone</p></div><div><strong>81.5</strong><p>WBench navigation</p></div><div><strong>93.8</strong><p>Perspective switching<small>With perspective-switching fine-tuning.</small></p></div></div>
+    </section>
+    <section class="section wrap" id="worlds" aria-labelledby="worlds-title">
+      <div class="section-heading"><div><p class="section-kicker">02 / GENERATED WORLDS</p><h2 id="worlds-title">A world of <em>possibilities.</em></h2></div><button class="section-motion" data-motion="worlds" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>Pause videos</span></button></div>
+      <div class="video-grid worlds-grid" id="worlds-grid" aria-label="Generated worlds"></div>
+      <p class="gallery-hint">Every window opens onto another world. Use the arrows to explore.</p>
+    </section>
+    <section class="switch-section" id="switching" aria-labelledby="switch-title"><div class="section wrap">
+      <div class="section-heading"><div><p class="section-kicker">03 / CHANGING PERSPECTIVES</p><h2 id="switch-title">Change the view.<em> Stay in the world.</em></h2></div><button class="section-motion" data-motion="switching" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>Pause videos</span></button></div>
+      <div class="video-grid switching-grid" id="switching-grid" aria-label="Perspective switching examples"></div>
+    </div></section>
+    <section class="section wrap citation" id="citation" aria-labelledby="citation-title">
+      <div class="section-heading"><div><p class="section-kicker">04 / CITATION</p><h2 id="citation-title">BibTeX</h2></div><button class="copy-citation" id="copy-citation"><svg><use href="#i-copy"/></svg><span>Copy BibTeX</span></button></div>
+      <div class="citation-block"><span class="citation-note">Citation</span><pre tabindex="0" aria-label="BibTeX template"><code id="bibtex">@misc{chen2026world,
+  title  = {World-in-Context: In-Context Conditioning for Interactive Video World Models},
+  author = {Authors to be announced},
+  year   = {2026}
+}</code></pre></div>
+      <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="#top"><img src="assets/logo.png" width="18" height="18" alt=""><span>World-in-Context</span></a><span class="copyright">© 2026 Harold Haodong Chen</span><a href="#top">Back to top ↑</a></footer>
+  <noscript><p class="noscript">Enable JavaScript to view the video galleries.</p></noscript>
+</body>
+</html>
