@@ -6,7 +6,7 @@
   const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const pausedGroups = {hero: reducedMotion.matches, worlds: false, switching: false};
+  const pausedGroups = {hero: reducedMotion.matches, worlds: false, switching: false, applications: false};
   const records = new Map();
   const hero = $('top');
   let scrollFrame = 0;
@@ -165,8 +165,12 @@
     $('hero-wall').append(stack);
   }
 
-  function createGallery(group, playlists) {
-    const grid = $(`${group}-grid`);
+  function createGallery(group, playlists, {
+    gridId = `${group}-grid`,
+    label = group === 'worlds' ? 'Generated world' : 'Perspective switching',
+    headingTag = 'h3'
+  } = {}) {
+    const grid = $(gridId);
     playlists.forEach((ids, index) => {
       const pool = ids.map(id => demos.get(id)).filter(Boolean);
       if (!pool.length) return;
@@ -174,8 +178,8 @@
       const article = document.createElement('article');
       article.className = 'video-window';
       article.setAttribute('aria-roledescription', 'carousel');
-      article.setAttribute('aria-label', `${group === 'worlds' ? 'Generated world' : 'Perspective switching'} window ${index+1}`);
-      article.innerHTML = `<div class="video-screen"><video controls autoplay muted loop playsinline preload="none"></video><button class="video-resume" hidden><span>${icon('play')} Play video</span></button></div><div class="window-footer"><h3 aria-live="polite"></h3><div class="window-navigation"><button class="previous" aria-label="Previous video in window ${index+1}">${icon('prev')}</button><span class="window-count"></span><button class="next" aria-label="Next video in window ${index+1}">${icon('next')}</button></div></div>`;
+      article.setAttribute('aria-label', `${label} window ${index+1}`);
+      article.innerHTML = `<div class="video-screen"><video controls autoplay muted loop playsinline preload="none"></video><button class="video-resume" hidden><span>${icon('play')} Play video</span></button></div><div class="window-footer"><${headingTag} class="window-title" aria-live="polite"></${headingTag}><div class="window-navigation"><button class="previous" aria-label="Previous video in ${escapeHTML(label)} window ${index+1}">${icon('prev')}</button><span class="window-count"></span><button class="next" aria-label="Next video in ${escapeHTML(label)} window ${index+1}">${icon('next')}</button></div></div>`;
       grid.append(article);
       const video = article.querySelector('video');
       const record = register(video, group, pool[0].video, article.querySelector('.video-resume'));
@@ -189,7 +193,7 @@
         video.poster = demo.poster;
         video.setAttribute('aria-label', demo.title);
         article.dataset.sceneId = demo.id;
-        article.querySelector('h3').textContent = demo.title;
+        article.querySelector('.window-title').textContent = demo.title;
         article.querySelector('.window-count').textContent = `${String(nextIndex+1).padStart(2,'0')} / ${String(pool.length).padStart(2,'0')}`;
         reconcile(record);
       }
@@ -208,6 +212,8 @@
   }
   createGallery('worlds', media.playlists.worlds);
   createGallery('switching', media.playlists.switching);
+  createGallery('applications', media.playlists.causal, {gridId: 'causal-grid', label: 'WiC-Causal', headingTag: 'h4'});
+  createGallery('applications', media.playlists.game, {gridId: 'game-grid', label: 'WiC-Game', headingTag: 'h4'});
   updateMotionControls();
 
   document.addEventListener('visibilitychange', () => {

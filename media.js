@@ -499,6 +499,78 @@ window.WIC_MEDIA = {
       "title": "Into the rainforest",
       "video": "assets/videos/scene-083.mp4",
       "poster": "assets/posters/scene-083.webp"
+    },
+    {
+      "id": "scene-084",
+      "title": "A penguin on the ice",
+      "video": "assets/videos/scene-084.mp4",
+      "poster": "assets/posters/scene-084.webp"
+    },
+    {
+      "id": "scene-085",
+      "title": "Across the dunes",
+      "video": "assets/videos/scene-085.mp4",
+      "poster": "assets/posters/scene-085.webp"
+    },
+    {
+      "id": "scene-086",
+      "title": "A ride through the savanna",
+      "video": "assets/videos/scene-086.mp4",
+      "poster": "assets/posters/scene-086.webp"
+    },
+    {
+      "id": "scene-087",
+      "title": "Inside the cathedral",
+      "video": "assets/videos/scene-087.mp4",
+      "poster": "assets/posters/scene-087.webp"
+    },
+    {
+      "id": "scene-088",
+      "title": "Cycling across the snow",
+      "video": "assets/videos/scene-088.mp4",
+      "poster": "assets/posters/scene-088.webp"
+    },
+    {
+      "id": "scene-089",
+      "title": "Through the art gallery",
+      "video": "assets/videos/scene-089.mp4",
+      "poster": "assets/posters/scene-089.webp"
+    },
+    {
+      "id": "scene-090",
+      "title": "Dust II · Fire",
+      "video": "assets/videos/scene-090.mp4",
+      "poster": "assets/posters/scene-090.webp"
+    },
+    {
+      "id": "scene-091",
+      "title": "Mirage · Walk and fire",
+      "video": "assets/videos/scene-091.mp4",
+      "poster": "assets/posters/scene-091.webp"
+    },
+    {
+      "id": "scene-092",
+      "title": "Nuke · Crouch and fire",
+      "video": "assets/videos/scene-092.mp4",
+      "poster": "assets/posters/scene-092.webp"
+    },
+    {
+      "id": "scene-093",
+      "title": "Polar station · Walk and fire",
+      "video": "assets/videos/scene-093.mp4",
+      "poster": "assets/posters/scene-093.webp"
+    },
+    {
+      "id": "scene-094",
+      "title": "Coastal road · Walk and crouch",
+      "video": "assets/videos/scene-094.mp4",
+      "poster": "assets/posters/scene-094.webp"
+    },
+    {
+      "id": "scene-095",
+      "title": "Volcanic road · Crouch and fire",
+      "video": "assets/videos/scene-095.mp4",
+      "poster": "assets/posters/scene-095.webp"
     }
   ],
   "hero": [
@@ -619,7 +691,9 @@ window.WIC_MEDIA = {
   ],
   "layout": {
     "world_windows": 12,
-    "switch_windows": 4
+    "switch_windows": 4,
+    "causal_windows": 2,
+    "game_windows": 2
   },
   "playlists": {
     "worlds": [
@@ -717,6 +791,46 @@ window.WIC_MEDIA = {
         "scene-082",
         "scene-083"
       ]
+    ],
+    "causal": [
+      [
+        "scene-084",
+        "scene-085",
+        "scene-086"
+      ],
+      [
+        "scene-087",
+        "scene-088",
+        "scene-089"
+      ]
+    ],
+    "game": [
+      [
+        "scene-090",
+        "scene-091",
+        "scene-092"
+      ],
+      [
+        "scene-093",
+        "scene-094",
+        "scene-095"
+      ]
     ]
-  }
+  },
+  "causal": [
+    "scene-084",
+    "scene-085",
+    "scene-086",
+    "scene-087",
+    "scene-088",
+    "scene-089"
+  ],
+  "game": [
+    "scene-090",
+    "scene-091",
+    "scene-092",
+    "scene-093",
+    "scene-094",
+    "scene-095"
+  ]
 };

@@ -8,7 +8,9 @@ Open `index.html`, or preview locally with `python3 -m http.server 8000 --bind 1
 - `styles.css`: presentation and responsive layout.
 - `app.js`: video playback, independent carousels, and scroll effects.
 - `media.js`: public scene IDs, display titles, and exact playlists.
-- `assets/`: 24 lightweight background clips, 60 gallery clips, their posters, the logo, and the method figure.
+- `assets/`: 24 lightweight background clips, 72 gallery clips, their posters, the logo, and the method figure.
+
+Applications follows Changing Perspectives with four carousel windows: two for WiC-Causal and two for WiC-Game, with three clips per window. Videos load and play when visible; arrows load the next selection.
 
 The paper URL, author names, and citation details remain placeholders. The GitHub button links to `HaroldChen19/World-in-Context`.
 

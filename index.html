@@ -24,7 +24,7 @@
   </defs></svg>
   <header class="site-header">
     <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="32" height="32"><span>World-in-Context</span></a>
-    <nav aria-label="Main navigation"><a href="#method">Overview</a><a href="#worlds">Worlds</a><a href="#switching">Perspectives</a></nav>
+    <nav aria-label="Main navigation"><a href="#method">Overview</a><a href="#worlds">Worlds</a><a href="#switching">Perspectives</a><a href="#applications">Applications</a></nav>
   </header>
   <main>
     <section class="hero" id="top" aria-labelledby="hero-title">
@@ -61,8 +61,21 @@
       <div class="section-heading"><div><p class="section-kicker">03 / CHANGING PERSPECTIVES</p><h2 id="switch-title">Change the view.<em> Stay in the world.</em></h2></div><button class="section-motion" data-motion="switching" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>Pause videos</span></button></div>
       <div class="video-grid switching-grid" id="switching-grid" aria-label="Perspective switching examples"></div>
     </div></section>
+    <section class="section wrap applications" id="applications" aria-labelledby="applications-title">
+      <div class="section-heading"><div><p class="section-kicker">04 / APPLICATIONS</p><h2 id="applications-title">More ways to <em>interact.</em></h2></div><button class="section-motion" data-motion="applications" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>Pause videos</span></button></div>
+      <div class="application-groups">
+        <div class="application-group" role="group" aria-labelledby="causal-title">
+          <div class="application-intro"><h3 id="causal-title">WiC-Causal</h3><p>Historical context supports coherent, long-horizon causal rollouts.</p></div>
+          <div class="video-grid application-grid" id="causal-grid" aria-label="WiC-Causal examples"></div>
+        </div>
+        <div class="application-group" role="group" aria-labelledby="game-title">
+          <div class="application-intro"><h3 id="game-title">WiC-Game</h3><p>Fire, crouch, and walk across game maps and realistic environments.</p></div>
+          <div class="video-grid application-grid" id="game-grid" aria-label="WiC-Game examples"></div>
+        </div>
+      </div>
+    </section>
     <section class="section wrap citation" id="citation" aria-labelledby="citation-title">
-      <div class="section-heading"><div><p class="section-kicker">04 / CITATION</p><h2 id="citation-title">BibTeX</h2></div><button class="copy-citation" id="copy-citation"><svg><use href="#i-copy"/></svg><span>Copy BibTeX</span></button></div>
+      <div class="section-heading"><div><p class="section-kicker">05 / CITATION</p><h2 id="citation-title">BibTeX</h2></div><button class="copy-citation" id="copy-citation"><svg><use href="#i-copy"/></svg><span>Copy BibTeX</span></button></div>
       <div class="citation-block"><span class="citation-note">Citation</span><pre tabindex="0" aria-label="BibTeX template"><code id="bibtex">@misc{chen2026world,
   title  = {World-in-Context: In-Context Conditioning for Interactive Video World Models},
   author = {Authors to be announced},
