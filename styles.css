@@ -52,7 +52,7 @@ em { color:var(--purple); font:italic 1.04em Georgia,'Times New Roman',serif; }
 .button-glass { border:1px solid #c6b4ec36; background:#30243e70; backdrop-filter:blur(12px); color:#e3dcef; }
 .button-glass:hover { background:#3b2d50aa; }
 .github-link .external-arrow { width:13px; height:13px; margin-left:7px; color:#b3a1cc; }
-.author-block { margin-top:32px; color:#b5aabe; font-size:11px; }
+.author-block { margin-top:22px; color:#b5aabe; font-size:14px; }
 .author-block p { display:flex; align-items:baseline; justify-content:center; gap:4px; }
 .author-block i { font-style:normal; padding-inline:11px; color:#736780; }
 .author-block>span { display:block; margin-top:9px; font-size:11px; color:#a699b4; }
@@ -117,6 +117,12 @@ h2 { font-size:clamp(29px,3vw,43px); line-height:1.25; letter-spacing:-1.5px; fo
 .citation { max-width:1180px; padding-top:30px; }
 .citation h2 { font-size:32px; }
 .citation .section-heading { margin-bottom:22px; }
+.contributors { margin-bottom:30px; }
+.contributor-list { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 24px; list-style:none; padding:0; margin:0; color:#d9cce9; font-size:14px; line-height:1.7; }
+.contributor-list li { white-space:nowrap; }
+.contributor-list sup { margin-left:3px; color:var(--purple); font-size:10px; line-height:0; }
+.contributor-roles { display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:13px; color:#b4a0cf; font-size:11px; }
+.contributor-note { margin-top:9px; color:#94859f; font-size:11px; line-height:1.8; }
 .copy-citation { display:flex; align-items:center; gap:7px; border:1px solid #bda2e52b; background:#1c1526; color:#c2aedc; border-radius:6px; padding:8px 12px; font-size:10px; }
 .copy-citation:hover { background:#2a1d3b; }
 .copy-citation svg { width:14px; height:14px; }
@@ -178,6 +184,7 @@ h2 { font-size:clamp(29px,3vw,43px); line-height:1.25; letter-spacing:-1.5px; fo
   .method-figure { padding:10px 6px; border-radius:6px; } .results-row { margin-top:28px; gap:12px; } .results-row>div+div { padding-left:12px; }
   .results-row strong { font-size:32px; letter-spacing:-1px; } .results-row strong>span { font-size:20px; } .results-row p { font-size:8px; } .results-row small { font-size:7px; }
   .citation { padding-top:10px; } .citation h2 { font-size:28px; } .citation-note { padding:12px 15px; font-size:9px; } .citation pre { padding:18px 15px; font-size:10px; } .copy-citation { font-size:9px; padding:7px 10px; }
+  .contributor-list { gap:8px 18px; font-size:15px; } .contributor-roles { font-size:10px; } .contributor-note { font-size:10px; }
   .site-footer { padding-block:22px; gap:13px; flex-wrap:wrap; } .site-footer .brand { font-size:10px; gap:7px; } .site-footer .brand img { width:16px; height:16px; } .site-footer .copyright { flex-basis:100%; order:3; font-size:8px; } .site-footer>a:last-child { font-size:8px; }
 }
 @media (prefers-reduced-motion:reduce) {
